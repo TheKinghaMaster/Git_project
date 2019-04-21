@@ -2,7 +2,8 @@ My Name is Sanchit Grover. This is my git project where i have submitted a c++ c
 
 The other three members of my group are :-
 
-Shivani tyagi
-ketan kapoor
-Maitri
+1.Shivani tyagi
+2.ketan kapoor
+3.Maitri
+
 They are the contributors in my Git_project.
