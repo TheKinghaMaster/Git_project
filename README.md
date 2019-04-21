@@ -1,4 +1,4 @@
-My Name is Sanchit Grover. This is my git project where i have submitted a c++ code for bus reservation system.
+My Name is Sanchit Grover. This is my git project where i have submitted a c++ code for bus and train reservation system.
 
 The other three members of my group are :-
 
