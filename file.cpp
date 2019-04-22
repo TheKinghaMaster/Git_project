@@ -290,4 +290,77 @@ void main()
     }
     while(ch<=3);
     getch();
-}
+
+void database()
+{
+    char *password;
+    char *pass="codewithc";
+    password=getpass("Enter the admininistrator password:");
+    detail a;
+    fstream f;
+    int ch;
+    char c;
+    if(strcmp(pass,password)!=0)
+    {
+        cout<<"Enter the password correctly \n";
+        cout<<"You are not permitted to logon this mode\n";
+        goto h;
+    }
+    if(strcmp(pass,password)==0)
+    {
+        char c;
+        do
+        {
+            cout<<"...........ADMINISTRATOR MENU...........\n";
+            cout<<"1.Create detail data base\n2.Add details\n";
+            cout<<"3.Display details\n4.User management\n";
+            cout<<"5.Display passenger details\n6.Return to main menu\n";
+            cout<<"Enter your choice:";
+            cin>>ch;
+
+
+            cout<<endl;
+            switch(ch)
+            {
+            case 1:
+                f.open("t.txt",ios::out|ios::binary);
+                do
+                {
+                    a.getdetail();
+                    f.write((char *) & a,sizeof(a));
+                    cout<<"Do you want to add one more record?\n";
+                    cout<<"y-for Yes\nn-for No\n";
+                    cin>>c;
+                }
+                while(c=='y');
+                f.close();
+                break;
+            case 2:
+                f.open("t.txt",ios::in|ios::out|ios::binary|ios::app);
+                a.getdetail();
+                f.write((char *) & a,sizeof(a));
+                f.close();
+                break;
+            case 3:
+                f.open("t.txt",ios::in|ios::out|ios::binary|ios::app);
+                f.seekg(0);
+                while(f.read((char *) & a,sizeof(a)))
+                {
+                    a.displaydetail();
+                }
+                f.close();
+                break;
+            case 4:
+                manage();
+                break;
+            case 5:
+                displaypassdetail();
+                break;
+            }
+        }
+        while(ch<=5);
+
+        f.close();
+    }
+h:
+}}
