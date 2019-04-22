@@ -251,3 +251,42 @@ while(n<=p)
 
 }
 
+void manage();
+void can();
+void user();
+void database();
+void res();
+void reserve();
+void displaypassdetail();
+void cancell();
+void enquiry();
+void main()
+{
+    clrscr();
+    int ch;
+    cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+    cout<<".......WELCOME TO RAILWAY RESERVATION SYSTEM..........\n";
+    cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+    do
+    {
+        cout<<"^^^^^^^^^^^^^^^^^^^^^^MAIN MENU^^^^^^^^^^^^^^^^^^^^\n";
+        cout<<"1.Admin mode\n2.User mode\n3.Exit\n";
+        cout<<"Enter your choice:";
+        cin>>ch;
+        cout<<endl;
+        switch(ch)
+
+        {
+        case 1:
+            database();
+            break;
+        case 2:
+            user();
+            break;
+        case 3:
+            exit(0);
+        }
+    }
+    while(ch<=3);
+    getch();
+}
