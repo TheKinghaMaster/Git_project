@@ -249,6 +249,7 @@ while(n<=p)
 
     cout<<"Enter correct bus no: ";
 
+
 }
 
 void manage();
